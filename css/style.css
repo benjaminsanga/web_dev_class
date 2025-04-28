@@ -1,0 +1,119 @@
+body {
+  margin: 10px;
+  padding: 0;
+}
+
+.main-div {
+  width: 22vw;
+  margin: 0 auto;
+}
+
+.login-div {
+  padding-bottom: 20px;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+}
+
+.login-div > p {
+  font-size: 2.25rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  margin: 3px 0;
+  font-size: 0.65rem;
+  padding: 10px 5px;
+  width: 70%;
+  background-color: rgb(246, 246, 246);
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+
+button {
+  margin-top: 7px;
+  padding: 7px;
+  width: 75%;
+  background-color: rgb(78, 182, 251);
+  color: rgb(246, 246, 246);
+  font-size: 0.75rem;
+  font-weight: bold;
+  border: 0;
+  border-radius: 5px;
+}
+
+.lines {
+  width: 75%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(83, 83, 83);
+}
+
+.lines > div {
+  height: 1px;
+  width: 40%;
+  border: 0.5px solid lightgray;
+  background-color: lightgray;
+}
+
+.lines > p {
+  font-size: 12px;
+}
+
+.extras {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 0.85rem;
+}
+
+.extras > a {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  margin: 7px 0;
+}
+
+#fb-login {
+  color: rgb(0, 121, 201);
+}
+
+.signup {
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  text-align: center;
+  margin: 10px 0;
+  font-size: small;
+}
+
+.signup a {
+  text-decoration: none;
+}
+
+.app-div {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.app-div p {
+  font-size: small;
+  text-align: center;
+}
+
+.app-div-images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.app-div-images img {
+  width: 100px;
+  height: 35px;
+}
