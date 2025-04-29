@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  background-color: #f0f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signin {
+  width: 70vw;
+  /* margin: 0 auto; */
+}
+
+.signin-content {
+  background-color: white;
+  padding: 40px;
+  border-radius: 30px;
+}
+
+.logo img {
+  width: 45px;
+  height: auto;
+}
+
+.signin-text-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.signin-left h1 {
+  font-size: 2.5rem;
+  font-weight: lighter;
+}
+
+.signin-left p {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.signin-right-form input {
+  width: 90%;
+  padding: 17px 15px;
+  border-radius: 7px;
+  border: 1px solid gray;
+  font-size: 1rem;
+}
+
+/* .signin-right-form > a { <div class="signin-right-form"><a></a></div> */
+/* .signin-right-form + a { <div class="signin-right-form"></div><a></a> */
+/* .signin-right-form ~ a { */
+.signin-right-form a { /* <div class="signin-right-form"><p><a></a></p></div> */
+  text-decoration: none;
+  color: #0b57d0;
+  padding: 3px;
+}
+
+.signin-right-form a:hover {
+  background-color: #eff5ff;
+  border-radius: 3px;
+}
+
+.signin-right-form, .signin-guest {
+  padding-bottom: 40px;
+}
+
+.signin-guest p, .signin-right-form p {
+  margin: 0;
+}
+
+.signin-guest a {
+  text-decoration: none;
+  color: #0b57d0;
+}
+
+.signin-guest a:hover {
+  text-decoration: underline;
+}
+
+.signin-buttons {
+  padding-top: 40px;
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}
+
+.signin-buttons button {
+  border-radius: 20px;
+  font-size: 0.95rem;
+  padding: 10px 20px;
+}
+
+.signin-buttons button:nth-child(1) {
+  background-color: transparent;
+  border: none;
+  color: #0b57d0;
+  font-weight: bold;
+}
+
+.signin-buttons button:nth-child(1):hover {
+  background-color: #eff5ff;
+}
+
+.signin-buttons button:nth-child(2) {
+  background-color: #0b57d0;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.signin-buttons button:nth-child(2):hover {
+  background-color: #003893;
+}
