@@ -1,6 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .main {
@@ -70,6 +73,10 @@ body {
 
 .signin-guest p, .signin-right-form p {
   margin: 0;
+}
+
+.signin-right-form p {
+  margin-top: 5px;
 }
 
 .signin-guest a {
