@@ -122,3 +122,32 @@ body {
 .signin-buttons button:nth-child(2):hover {
   background-color: #003893;
 }
+
+/* tablet */
+@media only screen and (max-width: 1000px) {
+  .signin-left h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 14px !important;
+  }
+}
+
+/* mobile */
+@media only screen and (max-width: 600px) {
+  .signin-left h1 {
+    font-size: 1.2rem;
+  }
+  p, button, input, a {
+    font-size: 12px !important;
+  }
+  .signin-text-form {
+    flex-direction: column;
+  }
+  .signin-right-form {
+    margin-top: 10px;
+  }
+  .signin-right-form input {
+    padding: 12px 10px;
+  }
+}
