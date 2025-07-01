@@ -17,12 +17,13 @@ passwordDom.style.outline = 'none'
 
 // disable button
 buttonDom.disabled = true
+buttonDom.style.backgroundColor = 'cadetblue'
 
 // add email event listener
 emailDom.addEventListener('keyup', (event) => {
   const email = event.target.value
   if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/.test(email)) {
-    emailDom.style.border = '2px solid lightgreen'
+    emailDom.style.border = '1px solid lightgreen'
     isEmailValid = true
   } else {
     emailDom.style.border = "1px solid red"
@@ -31,8 +32,10 @@ emailDom.addEventListener('keyup', (event) => {
   if (isEmailValid && isPasswordValid) {
     // enable button
     buttonDom.disabled = false
+    buttonDom.style.backgroundColor = 'cornflowerblue'
   } else {
     buttonDom.disabled = true
+    buttonDom.style.backgroundColor = 'cadetblue'
   }
 })
 
@@ -40,7 +43,7 @@ emailDom.addEventListener('keyup', (event) => {
 passwordDom.addEventListener('keyup', (event) => {
   const password = event.target.value
   if (/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-])(?=.{8,}).*$/.test(password)) {
-    passwordDom.style.border = '2px solid lightgreen'
+    passwordDom.style.border = '1px solid lightgreen'
     isPasswordValid = true
   } else {
     passwordDom.style.border = '1px solid red'
@@ -49,8 +52,10 @@ passwordDom.addEventListener('keyup', (event) => {
   if (isEmailValid && isPasswordValid) {
     // enable button
     buttonDom.disabled = false
+    buttonDom.style.backgroundColor = 'cornflowerblue'
   } else {
     buttonDom.disabled = true
+    buttonDom.style.backgroundColor = 'cadetblue'
   }
 })
 
@@ -61,5 +66,20 @@ buttonDom.addEventListener('click', (event) => {
   const email = emailDom.value
   const password = passwordDom.value
   const data = JSON.stringify({email, password})
-  console.log("data:", data)
+
+  fetch('http://localhost:3000/signin', { 
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    method: 'POST',
+    body: data
+   })
+    .then(res => res)
+    .then(data => {
+      if (data.status === 200) {
+        alert("Login successful")
+      } else {
+        alert("invalid credentials")
+      }
+    })
 })
